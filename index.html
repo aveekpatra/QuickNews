@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
+    <title>Quick News - Project by Aveek Patra</title>
+  </head>
+
+  <body>
+    <nav id="nav">
+      <div class="main-nav flex container">
+        <a href="#" class="flex" onclick="reload()">
+          <img src="./img/logo.png" alt="News logo" width="40px" /><span class="flex">
+            Quick News <span id="credit">Project by - <span style="color: black;">Aveek Patra</span></span></span
+          >
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li class="link-hover nav-items" id="europe" onclick="onNavItemClick('europe')">Europe</li>
+            <li class="link-hover nav-items" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+            <li class="link-hover nav-items" id="india" onclick="onNavItemClick('india')">India</li>
+            <li class="link-hover nav-items" id="technology" onclick="onNavItemClick('technology')">Technology</li>
+          </ul>
+        </div>
+        <div class="search-bar flex">
+          <input type="text" class="news-input" id="news-input" placeholder="e.g. Science" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+
+      <template id="template-news-cards">
+        <div class="card">
+          <div class="card-header">
+            <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img" />
+          </div>
+          <div class="card-content">
+            <h3 id="news-title">This is a title</h3>
+            <h6 class="news-source" id="news-source">Publication, Date</h6>
+            <p class="news-desc" id="news-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum minima veniam error nisi dolore ab
+              enim natus ad provident dolores porro assumenda, nesciunt similique repudiandae sed quam eum atque
+              explicabo?
+            </p>
+          </div>
+        </div>
+      </template>
+    </main>
+  </body>
+</html>
